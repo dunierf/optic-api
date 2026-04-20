@@ -18,9 +18,13 @@ return new class extends Migration
             $table->foreignId('type_id')
                 ->cascadeOnUpdate()
                 ->noActionOnDelete();
+            $table->decimal('price')->index();
+            $table->string('image')->nullable();
             $table->string('slug')->unique();
             $table->string('slug_es')->unique();
-            $table->decimal('price')->index();
+            $table->mediumText('text')->nullable();
+            $table->mediumText('text_es')->nullable();
+            $table->boolean('visible')->default(1)->index();
             $table->timestamps();
         });
     }
