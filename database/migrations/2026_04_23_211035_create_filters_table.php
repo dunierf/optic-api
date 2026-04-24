@@ -11,20 +11,16 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('products', function (Blueprint $table) {
+        Schema::create('filters', function (Blueprint $table) {
             $table->id();
             $table->string('name')->unique();
             $table->string('name_es')->unique();
-            $table->foreignId('type_id')
-                ->cascadeOnUpdate()
-                ->noActionOnDelete();
             $table->decimal('price')->index();
             $table->string('image')->nullable();
-            $table->string('slug')->unique();
-            $table->string('slug_es')->unique();
             $table->mediumText('text')->nullable();
             $table->mediumText('text_es')->nullable();
             $table->boolean('visible')->default(1)->index();
+            $table->boolean('active')->default(1)->index();
             $table->timestamps();
         });
     }
@@ -34,6 +30,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('products');
+        Schema::dropIfExists('filters');
     }
 };

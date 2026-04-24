@@ -15,32 +15,34 @@ class TypeSeeder extends Seeder
     {
         Type::insert([
             [
-                'id'            => 1,
-                'name'          => 'Glasses',
-                'name_es'       => 'Espejuelos',
-                'created_at'    => now(),
-                'updated_at'    => now()
+                "id"            => 1,
+                "name"          => "Customized glasses",
+                "name_es"       => "Espejuelos armados",
+                "created_at"    => now()
             ],
             [
-                'id'            => 2,
-                'name'          => 'Frame',
-                'name_es'       => 'Armadura',
-                'created_at'    => now(),
-                'updated_at'    => now()
+                "id"            => 2,
+                "name"          => "Glasses",
+                "name_es"       => "Espejuelos",
+                "created_at"    => now()
             ],
             [
-                'id'            => 3,
-                'name'          => 'Filter',
-                'name_es'       => 'Filtro',
-                'created_at'    => now(),
-                'updated_at'    => now()
+                "id"            => 3,
+                "name"          => "Frames",
+                "name_es"       => "Armaduras",
+                "created_at"    => now()
             ],
             [
-                'id'            => 4,
-                'name'          => 'Accessories',
-                'name_es'       => 'Accesorios',
-                'created_at'    => now(),
-                'updated_at'    => now()
+                "id"            => 4,
+                "name"          => "Lenses",
+                "name_es"       => "Cristales",
+                "created_at"    => now()
+            ],
+            [
+                "id"            => 5,
+                "name"          => "Accessories",
+                "name_es"       => "Accesrios",
+                "created_at"    => now()
             ]
         ]);
     }
