@@ -17,7 +17,7 @@ class TypeSeeder extends Seeder
             [
                 "id"            => 1,
                 "name"          => "Customized glasses",
-                "name_es"       => "Espejuelos armados",
+                "name_es"       => "Espejuelos personalizados",
                 "created_at"    => now()
             ],
             [
